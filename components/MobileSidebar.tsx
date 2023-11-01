@@ -1,35 +1,28 @@
 "use client"
 
 import { Menu } from "lucide-react"
-import { Button } from "./ui/button"
 import {
 	Sheet,
 	SheetContent,
-	SheetDescription,
-	SheetHeader,
-	SheetTitle,
 	SheetTrigger,
 } from "./ui/sheet"
 import Sidebar from "./Sidebar"
 
 const MobileSidebar = () => {
 	return (
-		<Sheet>
-			<SheetTrigger>
-				<Button
-					variant="ghost"
-					size="icon"
-					className='md:hidden'
-				>
+		<>
+			<Sheet>
+				<SheetTrigger>
 					<Menu />
-				</Button>
-			</SheetTrigger>
+				</SheetTrigger>
 
-			<SheetContent side="left" className="p-0">
-				<Sidebar />
-			</SheetContent>
-		</Sheet>
+				<SheetContent side="left" className="w-[400px] sm:w-[540px]">
+					<Sidebar />
+				</SheetContent>
+			</Sheet>
+		</>
 	)
 }
 
 export default MobileSidebar
+
